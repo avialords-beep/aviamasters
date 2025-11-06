@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Aviamasters — инструкция и быстрые ссылки: играть в браузере, в Telegram и подписка на конкурсный канал. Включайте VPN." />
+  <meta property="og:title" content="Aviamasters — Премиальные ссылки" />
+  <meta property="og:description" content="Играй в браузере или Telegram. Подписывайся на канал с конкурсами. Включай VPN." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="image/avia.webp" />
+  <meta name="theme-color" content="#0f3460" />
+  <title>Премиальные Ссылки — Aviamasters</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-1: #0f0f23;
+      --bg-2: #1a1a2e;
+      --bg-3: #16213e;
+      --bg-4: #0f3460;
+      --bg-5: #533483;
+      --text: #ffffff;
+      --muted: rgba(255, 255, 255, 0.72);
+      --glass: rgba(255, 255, 255, 0.06);
+      --glass-stroke: rgba(255, 255, 255, 0.14);
+      --ring: rgba(255, 255, 255, 0.35);
+      --shadow: rgba(0, 0, 0, 0.55);
+      --grad-browser: linear-gradient(135deg, #ffd86f 0%, #fc6262 100%);
+      --grad-telegram: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      --grad-channel: linear-gradient(135deg, #9b66ff 0%, #ff6ad5 100%);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 25%, var(--bg-3) 50%, var(--bg-4) 75%, var(--bg-5) 100%);
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 25%, var(--bg-3) 50%, var(--bg-4) 75%, var(--bg-5) 100%);
+      min-height: 100svh;
+      text-align: center;
+      padding: 40px 20px;
+      overflow-x: hidden;
+    }
+
+    @supports (min-height: 100dvh) {
+      body { min-height: 100dvh; }
+    }
+
+    @supports (-webkit-touch-callout: none) {
+      html { height: -webkit-fill-available; }
+      body { min-height: -webkit-fill-available; }
+    }
+
+    body::before {
+      content: "";
+      position: fixed; inset: 0;
+      background:
+        radial-gradient(60vmax 60vmax at 10% 85%, rgba(120,119,198,.25), transparent 60%),
+        radial-gradient(60vmax 60vmax at 85% 15%, rgba(255,119,198,.15), transparent 60%),
+        radial-gradient(50vmax 50vmax at 40% 45%, rgba(120,219,255,.10), transparent 60%);
+      pointer-events: none; z-index: -1;
+      filter: blur(2px);
+    }
+
+    .container { max-width: 540px; margin: 0 auto; position: relative; }
+
+    .avatar {
+      width: 140px; height: 140px; border-radius: 50%; object-fit: cover;
+      border: 4px solid rgba(255,255,255,.2);
+      box-shadow: 0 18px 40px var(--shadow);
+      margin: 0 auto 26px;
+      transition: transform .35s ease, box-shadow .35s ease;
+      backdrop-filter: blur(10px);
+    }
+    .avatar:hover { transform: translateY(-6px) scale(1.04); }
+
+    h1, h2 { font-family: "Playfair Display", serif; letter-spacing: -0.02em; line-height: 1.2; margin: 0 0 12px; }
+    h1 { font-size: clamp(28px, 5vw, 38px); background: linear-gradient(135deg, #fff, #f8f9ff 50%, #e8e9ff); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    h2 { font-size: clamp(22px, 4.2vw, 28px); background: linear-gradient(135deg, #ffb4b4, #fff 60%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+    .subtitle { color: var(--muted); margin-bottom: 28px; font-size: 15px; }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px; margin: 6px 0 32px; padding: 8px 14px;
+      font-weight: 600; font-size: 13px; color: #0b1220;
+      background: linear-gradient(180deg, #d8ffd8 0%, #9dffb3 100%);
+      border-radius: 999px;
+    }
+    .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: #19c37d; }
+
+    .video-container { position: relative; margin: 22px 0 40px; }
+    .video-box {
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 16 / 9;
+      margin: 0 auto;
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--glass);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--glass-stroke);
+      box-shadow: 0 25px 50px rgba(0,0,0,.45);
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+    .video-box:hover { transform: translateY(-4px); box-shadow: 0 35px 70px rgba(0,0,0,.5); }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      display: block;
+      background: #0b1220;
+    }
+
+    .links-container { display: flex; flex-direction: column; gap: 18px; align-items: center; margin-top: 6px; }
+
+    .link {
+      display: flex; align-items: center; gap: 14px;
+      width: 100%; max-width: 430px;
+      padding: 18px 22px;
+      text-decoration: none;
+      font-weight: 700;
+      color: var(--text);
+      border-radius: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 16px 34px rgba(0,0,0,.35);
+    }
+    .link:hover { transform: translateY(-5px) scale(1.03); filter: brightness(1.1); }
+
+    .link .link-icon {
+      width: 42px; height: 42px; border-radius: 50%; object-fit: cover;
+      border: 2px solid rgba(255,255,255,.4);
+      transition: all 0.3s ease;
+    }
+    .link:hover .link-icon { transform: scale(1.1); }
+
+    .link.browser { background: var(--grad-browser); }
+    .link.telegram { background: var(--grad-telegram); }
+    .link.channel { background: var(--grad-channel); }
+
+    .link .chevron { margin-left: auto; font-size: 20px; opacity: 0.9; }
+
+    @media (max-width: 480px) {
+      .video-box { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="image/avia.webp" alt="Aviamasters логотип" class="avatar" />
+    <h1>ИНСТРУКЦИЯ</h1>
+    <p class="subtitle">Смотри видео, включай VPN и выбирай удобный способ игры.</p>
+    <div class="badge"><span class="dot"></span> ВКЛЮЧАЙТЕ VPN</div>
+
+    <div class="video-container">
+      <div class="video-box">
+        <video id="tutorVideo" controls preload="auto" playsinline muted controlslist="nodownload noplaybackrate" poster="">
+          <source src="video/tutor.mp4" type="video/mp4" />
+          Ваш браузер не поддерживает воспроизведение видео.
+        </video>
+      </div>
+    </div>
+
+    <h1>ССЫЛКИ</h1>
+
+    <div class="links-container">
+      <a class="link browser" href="https://luckybear.fit/6tjY2A" target="_blank">
+        <img src="image/avia.webp" alt="Aviamasters" class="link-icon">
+        Aviamasters — Играть в Браузере
+        <span class="chevron">➜</span>
+      </a>
+
+      <a class="link telegram" href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MzlkNGYwNmEmbT1JTElBJmM9QXZpYXRn" target="_blank">
+        <img src="image/tg.jpg" alt="Telegram" class="link-icon">
+        Aviamasters — Играть в Telegram
+        <span class="chevron">➜</span>
+      </a>
+
+      <a class="link channel" href="https://t.me/+kI7AUP4WhhAwZTZi" target="_blank">
+        <img src="image/tg.jpg" alt="Telegram канал" class="link-icon">
+        Telegram-канал | Конкурсы
+        <span class="chevron">➜</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const v = document.getElementById('tutorVideo');
+      if (!v) return;
+      v.removeAttribute('poster');
+      v.addEventListener('loadedmetadata', () => {
+        try { v.currentTime = 0.5; } catch (e) {}
+      });
+      v.addEventListener('seeked', () => {
+        if (!v.paused) v.pause();
+      });
+    });
+  </script>
+</body>
+</html>
